@@ -20,7 +20,7 @@ class Tunnel(Resource):
         uuidcode = request.headers.get('uuidcode', '<no uuidcode>')
         app.log.info("uuidcode={} - Get Tunnel Status".format(uuidcode))
         app.log.trace("uuidcode={} - Arguments: {}".format(uuidcode, request.args))
-        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers.to_list()))
+        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers))
         
         validate_auth(app.log,
                       uuidcode,
@@ -60,7 +60,7 @@ class Tunnel(Resource):
         uuidcode = request.headers.get('uuidcode', '<no uuidcode>')
         app.log.info("uuidcode={} - Start tunnel".format(uuidcode))
         app.log.trace("uuidcode={} - Arguments: {}".format(uuidcode, request.args))
-        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers.to_list()))
+        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers))
         app.log.trace("uuidcode={} - JSON: {}".format(uuidcode, request.json))
         
         validate_auth(app.log,
@@ -137,7 +137,7 @@ class Tunnel(Resource):
         uuidcode = request.headers.get('uuidcode', '<no uuidcode>')
         app.log.info("uuidcode={} - Delete Tunnel".format(uuidcode))
         app.log.trace("uuidcode={} - Arguments: {}".format(uuidcode, request.args))
-        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers.to_list()))
+        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers))
         
         validate_auth(app.log,
                       uuidcode,

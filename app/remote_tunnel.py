@@ -19,7 +19,7 @@ class RemoteTunnel(Resource):
         uuidcode = request.headers.get('uuidcode', '<no uuidcode>')
         app.log.info("uuidcode={} - Get Remote tunnel status".format(uuidcode))
         app.log.trace("uuidcode={} - Arguments: {}".format(uuidcode, request.args))
-        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers.to_list()))
+        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers))
         
         validate_auth(app.log,
                       uuidcode,
@@ -53,7 +53,7 @@ class RemoteTunnel(Resource):
         uuidcode = request.headers.get('uuidcode', '<no uuidcode>')
         app.log.info("uuidcode={} - Start remote tunnel".format(uuidcode))
         app.log.trace("uuidcode={} - Arguments: {}".format(uuidcode, request.args))
-        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers.to_list()))
+        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers))
         app.log.trace("uuidcode={} - Json: {}".format(uuidcode, request.json))
         
         validate_auth(app.log,
@@ -88,7 +88,7 @@ class RemoteTunnel(Resource):
         uuidcode = request.headers.get('uuidcode', '<no uuidcode>')
         app.log.info("uuidcode={} - Delete remote tunnel".format(uuidcode))
         app.log.trace("uuidcode={} - Arguments: {}".format(uuidcode, request.args))
-        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers.to_list()))
+        app.log.trace("uuidcode={} - Headers: {}".format(uuidcode, request.headers))
         
         validate_auth(app.log,
                       uuidcode,
